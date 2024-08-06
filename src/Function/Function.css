@@ -23,6 +23,6 @@
   transition: opacity 0.5s ease;
 }
 
-#distance.show {
+.show {
   opacity: 1;
 }
