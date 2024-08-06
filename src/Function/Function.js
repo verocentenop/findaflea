@@ -36,10 +36,9 @@ export const printFunction = () => {
       const distance = getDistance(e, target)
       const distanceHint = getDistanceHint(distance, scale)
       distanceText.textContent = distanceHint
- distanceText.classList.add('show')
 
       setTimeout(() => {
-        distanceText.classList.remove = 'show'
+        distanceText.textContent = ''; 
       }, 1500)
 
 
