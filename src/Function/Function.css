@@ -14,8 +14,15 @@
 }
 
 #distance {
+  min-height: 40px;
   font-size: 30px;
   text-align: center;
   margin-bottom: 20px;
   user-select: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#distance.show {
+  opacity: 1;
 }
