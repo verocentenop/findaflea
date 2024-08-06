@@ -8,7 +8,7 @@ export const printFunction = () => {
   functionSection.className = 'function-section'
 
   const img = document.createElement('img')
-  img.src = 'src/assets/dashboard.jpg'
+  img.src = 'https://res.cloudinary.com/dzqoduh1s/image/upload/v1722943280/dashboard_rvvnug.jpg'
   img.id = 'map'
 
   const distanceText = document.createElement('p')
