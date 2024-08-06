@@ -37,6 +37,10 @@ export const printFunction = () => {
       const distanceHint = getDistanceHint(distance, scale)
       distanceText.textContent = distanceHint
 
+      setTimeout(() => {
+        distanceText.textContent = ''; // Limpia el contenido del mensaje
+      }, 2000); 
+
       if (distance < 40 * scale) {
         alert(`You found the flea in ${clicks} clicks!`)
         location.reload()
