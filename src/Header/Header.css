@@ -33,6 +33,8 @@ h1 {
   justify-content: center;
   cursor: pointer;
   user-select: none;
+   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .home-button:active {
