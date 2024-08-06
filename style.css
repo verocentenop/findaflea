@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  --padding-s: 15px;
+  --padding-m: 25px;
+  --padding-l: 40px;
+  --margin-s: 15px;
+  --margin-m: 25px;
+  --margin-l: 40px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+body {
+  background-color: rgb(244, 234, 169);
+}
+#app {
+  height: 99svh;
+  width: 99vw;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+}

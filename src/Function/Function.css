@@ -1,0 +1,18 @@
+.function-section {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  max-width: 1000px;
+}
+
+.function-section > img {
+  max-width: 100%;
+  padding: var(--margin-m);
+  cursor: pointer;
+}
+
+#distance {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
