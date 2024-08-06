@@ -36,10 +36,12 @@ export const printFunction = () => {
       const distance = getDistance(e, target)
       const distanceHint = getDistanceHint(distance, scale)
       distanceText.textContent = distanceHint
+ distanceText.classList.add('show')
 
       setTimeout(() => {
-        distanceText.textContent = ''; // Limpia el contenido del mensaje
-      }, 1000); 
+        distanceText.classList.remove = 'show'
+      }, 1500)
+
 
       if (distance < 40 * scale) {
         alert(`You found the flea in ${clicks} clicks!`)
