@@ -39,7 +39,7 @@ export const printFunction = () => {
 
       setTimeout(() => {
         distanceText.textContent = ''; // Limpia el contenido del mensaje
-      }, 2000); 
+      }, 1000); 
 
       if (distance < 40 * scale) {
         alert(`You found the flea in ${clicks} clicks!`)
