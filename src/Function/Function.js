@@ -1,5 +1,6 @@
 import './Function.css'
 import { getRandomNumber, getDistance, getDistanceHint } from './Indicators'
+import { images } from '../assets/arrayImg'
 
 export const printFunction = () => {
   const appContainer = document.querySelector('#app')
@@ -8,15 +9,20 @@ export const printFunction = () => {
   functionSection.className = 'function-section'
 
   const img = document.createElement('img')
-  img.src = 'https://res.cloudinary.com/dzqoduh1s/image/upload/v1722943280/dashboard_rvvnug.jpg'
   img.id = 'map'
 
   const distanceText = document.createElement('p')
   distanceText.id = 'distance'
 
+  const clicksText = document.createElement('p')
+  clicksText.id = 'clicks'
+
   functionSection.append(img)
-  main.append(functionSection, distanceText)
+  main.append(functionSection, distanceText, clicksText)
   appContainer.append(main)
+
+  const randomIndex = getRandomNumber(images.length)
+  img.src = images[randomIndex]
 
   img.addEventListener('load', () => {
     const WIDTH = img.clientWidth
@@ -30,22 +36,40 @@ export const printFunction = () => {
     const scale = WIDTH / minWidth
 
     let clicks = 0
+    const username = localStorage.getItem('username') || 'Invitado'
+
+    const updateClicksText = () => {
+      const userClicks = localStorage.getItem(`clicks_${username}`) || 0
+      clicksText.textContent = `Récord de clicks de ${username}: ${userClicks}`
+    }
+    updateClicksText()
 
     img.addEventListener('click', (e) => {
       clicks++
       const distance = getDistance(e, target)
       const distanceHint = getDistanceHint(distance, scale)
       distanceText.textContent = distanceHint
+      distanceText.classList.add('show')
 
       setTimeout(() => {
-        distanceText.textContent = ''; 
-      }, 1500)
-
+        distanceText.classList.remove('show')
+      }, 800)
 
       if (distance < 40 * scale) {
-        alert(`You found the flea in ${clicks} clicks!`)
+        alert(`¡Encontraste la pulga en ${clicks} clics!`)
+
+        const prevClicks = localStorage.getItem(`clicks_${username}`) || 0
+        if (clicks < prevClicks || prevClicks === 0) {
+          localStorage.setItem(`clicks_${username}`, clicks)
+        }
+
+        updateClicksText()
+
         location.reload()
       }
     })
+  })
+}
+
   })
 }
