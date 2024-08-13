@@ -1,0 +1,14 @@
+input {
+  background-color: rgb(247, 230, 206);
+  border: 1px saddlebrown solid;
+  border-radius: 8px;
+  margin: 10px;
+  height: 20px;
+  padding-left: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .register-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
