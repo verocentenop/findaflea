@@ -3,8 +3,12 @@ export const getRandomNumber = (size) => {
 }
 
 export const getDistance = (e, target) => {
-  const diffX = e.offsetX - target.x
-  const diffY = e.offsetY - target.y
+  const rect = e.target.getBoundingClientRect()
+  const offsetX = e.clientX - rect.left
+  const offsetY = e.clientY - rect.top
+
+  const diffX = offsetX - target.x
+  const diffY = offsetY - target.y
   return Math.sqrt(diffX * diffX + diffY * diffY)
 }
 
