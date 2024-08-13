@@ -1,6 +1,6 @@
 export const images = [
-  'src/assets/imagenbg.jpg',
-  'src/assets/imagenbg2.jpg',
-  'src/assets/imagenbg3.jpg',
-  'src/assets/dashboard.jpg'
+  'https://res.cloudinary.com/dzqoduh1s/image/upload/v1723550603/imagenbg3_fsursr.jpg',
+  'https://res.cloudinary.com/dzqoduh1s/image/upload/v1723550603/imagenbg_bm554o.jpg',
+  'https://res.cloudinary.com/dzqoduh1s/image/upload/v1723550603/imagenbg2_on2peg.jpg',
+  'https://res.cloudinary.com/dzqoduh1s/image/upload/v1723550603/dashboard_tr8dwi.jpg'
 ]
