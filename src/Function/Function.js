@@ -32,6 +32,7 @@ export const printFunction = () => {
       x: getRandomNumber(WIDTH),
       y: getRandomNumber(HEIGHT)
     }
+
     const minWidth = 320
     const scale = WIDTH / minWidth
 
@@ -58,8 +59,9 @@ export const printFunction = () => {
       if (distance < 40 * scale) {
         alert(`¡Encontraste la pulga en ${clicks} clics!`)
 
-        const prevClicks = localStorage.getItem(`clicks_${username}`) || 0
-        if (clicks < prevClicks || prevClicks === 0) {
+        const prevClicks =
+          localStorage.getItem(`clicks_${username}`) || Number.MAX_SAFE_INTEGER
+        if (clicks < prevClicks) {
           localStorage.setItem(`clicks_${username}`, clicks)
         }
 
@@ -68,8 +70,5 @@ export const printFunction = () => {
         location.reload()
       }
     })
-  })
-}
-
   })
 }
