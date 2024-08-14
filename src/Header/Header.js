@@ -6,7 +6,7 @@ export const printHeader = () => {
   headerContainer.className = 'header-container'
   const homeButton = document.createElement('button')
   homeButton.className = 'home-button'
-  homeButton.textContent = 'More games'
+  homeButton.textContent = 'Inicio'
 
   const buttonHref = '#'
   homeButton.onclick = () => {
