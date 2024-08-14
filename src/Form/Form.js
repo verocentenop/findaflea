@@ -19,7 +19,7 @@ export const printRegisterForm = () => {
 
   const submitButton = document.createElement('button')
   submitButton.type = 'submit'
-  submitButton.textContent = 'Registrar'
+  submitButton.textContent = 'Jugar'
   submitButton.className = 'home-button'
 
   form.append(label, input, submitButton)
