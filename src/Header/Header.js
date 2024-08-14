@@ -1,4 +1,4 @@
-import './Header.css'
+simport './Header.css'
 
 export const printHeader = () => {
   const appContainer = document.querySelector('#app')
@@ -18,7 +18,7 @@ export const printHeader = () => {
   const p = document.createElement('p')
   p.className = 'initial-text'
   p.textContent =
-    "There's a flea hiding somewhere, can you find it? Touch the screen to see where it is, we'll tell you how far away you are from finding it..."
+     'Hay una pulga escondida en algún lugar, ¡es tan diminuta que no podrás ni verla! Toca la imagen para buscarla, te diremos que tan lejos estás de encontrarla. ¿Podrás hacerlo?'
 
   headerContainer.append(homeButton, h1, p)
   appContainer.append(headerContainer)
