@@ -8,7 +8,7 @@
 
 .function-section > img {
   max-width: 100%;
-  margin: var(--margin-m);
+  margin-top: var(--margin-s);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   outline: none;
