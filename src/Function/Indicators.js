@@ -14,18 +14,18 @@ export const getDistance = (e, target) => {
 
 export const getDistanceHint = (distance, scale) => {
   if (distance < 60 * scale) {
-    return 'You almost get it!'
+    return 'Casi te pica!'
   } else if (distance < 90 * scale) {
-    return 'Really hot'
+    return 'Estás muy cerca'
   } else if (distance < 120 * scale) {
-    return "It's getting hot"
+    return 'Sigue por ahí'
   } else if (distance < 180 * scale) {
-    return 'Warm and comfy'
+    return 'Estás encaminado'
   } else if (distance < 250 * scale) {
-    return 'Still cold'
+    return 'Aún lejos'
   } else if (distance < 360 * scale) {
-    return 'Cold as an ice'
+    return 'Por aquí no'
   } else {
-    return 'Freezing!'
+    return 'Ni de chiste está aquí'
   }
 }
