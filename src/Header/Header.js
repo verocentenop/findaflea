@@ -8,7 +8,7 @@ export const printHeader = () => {
   homeButton.className = 'home-button'
   homeButton.textContent = 'Inicio'
 
-  const buttonHref = '#'
+  const buttonHref = 'https://vc-games.netlify.app/'
   homeButton.onclick = () => {
     window.location.href = buttonHref
   }
