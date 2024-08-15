@@ -1,4 +1,4 @@
-simport './Header.css';
+import './Header.css';
 
 export const printHeader = () => {
   const appContainer = document.querySelector('#app')
