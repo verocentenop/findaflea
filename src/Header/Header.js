@@ -7,11 +7,11 @@ export const printHeader = () => {
   const homeButton = document.createElement('button')
   homeButton.className = 'home-button'
   homeButton.textContent = 'Inicio'
-
-  const buttonHref = 'https://vc-games.netlify.app/'
+  
+ const buttonHref = 'https://vc-games.netlify.app/';
   homeButton.onclick = () => {
-    window.location.href = buttonHref
-  }
+    window.location.href = buttonHref;
+  };
 
   const h1 = document.createElement('h1')
   h1.textContent = 'FIND THE FLEA'
